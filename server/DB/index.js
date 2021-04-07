@@ -1,7 +1,9 @@
 const mongoose = require('mongoose')
+require('dotenv').config()
 
+const dbConnection = process.env.DBCONNECTION
 mongoose
-    .connect('mongodb://127.0.0.1:27017/books', { useNewUrlParser: true , useUnifiedTopology: true},)
+    .connect(dbConnection, { useNewUrlParser: true , useUnifiedTopology: true},)
     .catch(err => {
         console.error('Connection error', err.message)
     })
