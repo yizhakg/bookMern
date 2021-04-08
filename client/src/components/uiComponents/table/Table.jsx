@@ -7,17 +7,29 @@ export default function Table({ books }) {
     <React.Fragment>
       <table>
         <tr>
-          <th>Name</th>
+          <th>Img</th>
+          <th>Title</th>
+          <th>Author</th>
           <th>Pages</th>
+          <th>Year</th>
+          <th>Country</th>
+          <th>Language</th>
+          <th>Link</th>
         </tr>
         {
           books &&
-            books.map(bookItem => (
-              <tr>
-                <td>{bookItem?.name}</td>
-                <td>{bookItem?.pages}</td>
-              </tr>
-            ))
+          books.map(bookItem => (
+            <tr>
+              <th>{bookItem.imageLink}</th>
+              <th>{bookItem.title}</th>
+              <th>{bookItem.author}</th>
+              <th>{bookItem.pages}</th>
+              <th>{bookItem.year}</th>
+              <th>{bookItem.country}</th>
+              <th>{bookItem.language}</th>
+              <th><a href={bookItem.link}>site</a></th>
+            </tr>
+          ))
         }
       </table>
 
