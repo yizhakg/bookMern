@@ -2,12 +2,11 @@ import React from 'react'
 import "./Table.css"
 
 export default function Table({ books }) {
-  console.log(books)
   return (
     <React.Fragment>
       <table>
         <tr>
-          <th>Img</th>
+          {/* <th>Img</th> */}
           <th>Title</th>
           <th>Author</th>
           <th>Pages</th>
@@ -20,14 +19,14 @@ export default function Table({ books }) {
           books &&
           books.map(bookItem => (
             <tr>
-              <th>{bookItem.imageLink}</th>
-              <th>{bookItem.title}</th>
-              <th>{bookItem.author}</th>
-              <th>{bookItem.pages}</th>
-              <th>{bookItem.year}</th>
-              <th>{bookItem.country}</th>
-              <th>{bookItem.language}</th>
-              <th><a href={bookItem.link}>site</a></th>
+              {/* <td>{bookItem.imageLink}</td> */}
+              <td>{bookItem.title}</td>
+              <td>{bookItem.author}</td>
+              <td>{bookItem.pages}</td>
+              <td>{bookItem.year}</td>
+              <td>{bookItem.country}</td>
+              <td>{bookItem.language}</td>
+              <td><a href={bookItem.link}>site</a></td>
             </tr>
           ))
         }

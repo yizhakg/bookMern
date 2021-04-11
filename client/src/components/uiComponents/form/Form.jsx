@@ -9,7 +9,6 @@ export default function Form({ setRefresh }) {
     const pages = e.target[1].value;
     axios.post('http://localhost:4001/books/add', { book: { name, pages } })
       .then((res) => {
-        console.log(res)
         setRefresh(true)
       })
       .catch((err) => {
@@ -19,14 +18,34 @@ export default function Form({ setRefresh }) {
   return (
     <React.Fragment>
       <form class="books-form" onSubmit={addbook}>
-        <div className="input">
-          <label htmlFor="name">Book Name</label>
-          <input id="name" type="text" />
-        </div>
-        <div className="input">
+        <span className="input">
+          <label htmlFor="title">Book Title</label>
+          <input id="title" type="text" />
+        </span>
+        <span className="input">
+          <label htmlFor="author">Book Author</label>
+          <input id="author" type="text" />
+        </span>
+        <span className="input">
           <label htmlFor="pages">Book Pages</label>
           <input id="pages" type="number" />
-        </div>
+        </span>
+        <span className="input">
+          <label htmlFor="year">Book Year</label>
+          <input id="year" type="number" />
+        </span>
+        <span className="input">
+          <label htmlFor="country">Book Country</label>
+          <input id="country" type="text" />
+        </span>
+        <span className="input">
+          <label htmlFor="language">Book Language</label>
+          <input id="language" type="text" />
+        </span>
+        <span className="input">
+          <label htmlFor="link">Book Link</label>
+          <input id="link" type="text" />
+        </span>
         <button type="submit">submit</button>
       </form>
     </React.Fragment>

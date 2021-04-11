@@ -1,9 +1,23 @@
-.books-form{
+.books-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 100px;
 }
-.books-form >*{
-  margin: 30px;
+.books-form span {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 50%;
+}
+.books-form span * {
+  height: 26px;
+  margin: 14px;
+  width: 50%;
+}
+.books-form span label {
+text-align: left;
 }
