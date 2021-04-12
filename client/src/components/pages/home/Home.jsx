@@ -9,7 +9,7 @@ export default function Home() {
 
   useEffect(() => {
     const PORT = process.env.PORT || 4001;
-    axios.get(`http://localhost:${PORT}/books`).then((res) => {
+    axios.get(`http://localhost:${PORT}/books/`).then((res) => {
       setBooks(res.data.data);
       console.log(res.data.data);
     })
