@@ -1,11 +1,10 @@
 //app requires
 require("dotenv").config();
-
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const express = require("express");
-const chalk = require("chalk");
 const app = express();
+const chalk = require("chalk");
 const db = require("./DB");// mongo connection require
 const PORT = process.env.PORT || 4001;
 const path = require('path'); 

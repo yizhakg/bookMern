@@ -1,6 +1,6 @@
-const mongoose = require('mongoose')
 require('dotenv').config()
 
+const mongoose = require('mongoose')
 const dbConnection = process.env.DB
 mongoose
     .connect(dbConnection, { useNewUrlParser: true , useUnifiedTopology: true},)
@@ -8,6 +8,6 @@ mongoose
         console.error('Connection error', err.message)
     })
 
-const db = mongoose.connection
 
-module.exports = db
+
+module.exports = mongoose.connection
