@@ -1,6 +1,6 @@
 //app requires
+require("dotenv").config();
 const bodyParser = require("body-parser");
-const dotenv = require("dotenv").config();
 const cors = require("cors");
 const express = require("express");
 const chalk = require("chalk");
