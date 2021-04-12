@@ -1,11 +1,12 @@
 //app requires
 const bodyParser = require("body-parser");
+const dotenv = require("dotenv").config();
 const cors = require("cors");
 const express = require("express");
 const chalk = require("chalk");
 const app = express();
 const db = require("./DB");// mongo connection require
-const PORT = process.env.PORT || 4001;
+const PORT = process.env.PORT || 8080;
 const path = require('path'); 
 //app settings
 app.use(bodyParser.json());
