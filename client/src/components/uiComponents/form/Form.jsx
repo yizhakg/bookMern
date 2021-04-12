@@ -7,7 +7,8 @@ export default function Form({ setRefresh }) {
     e.preventDefault();
     const name = e.target[0].value;
     const pages = e.target[1].value;
-    axios.post('http://localhost:4001/books/add', { book: { name, pages } })
+    const PORT = process.env.PORT || 4001;
+    axios.post(`http://localhost:${PORT}/books/add`, { book: { name, pages } })
       .then((res) => {
         setRefresh(true)
       })
