@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 require('dotenv').config()
 
-const dbConnection = "mongodb+srv://yizhakg:Aa123456@cluster0.kcsau.mongodb.net/Books?retryWrites=true&w=majority"
+const dbConnection = process.env.DB
 mongoose
     .connect(dbConnection, { useNewUrlParser: true , useUnifiedTopology: true},)
     .catch(err => {
