@@ -10,11 +10,6 @@ const getAllBooks = (req, res) => {
 const getBooksById = (req, res) => {
   const bookId = req.params.id
   res.status(200).json({success:true,data:bookId})
-  // bookModel.findById(bookId, (err, results) => {
-  //   if(err) throw err;
-  //   if(!results.length) res.status(201).json({success:true,data:"No Book By This Id"})
-  //   if(results.length) res.status(200).json({success:true ,data:id})
-  // });
 };
 const addNewBook = (req, res) => {
   console.log(req.body)

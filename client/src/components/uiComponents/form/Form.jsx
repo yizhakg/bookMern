@@ -5,10 +5,22 @@ import axios from 'axios'
 export default function Form({ setRefresh }) {
   const addbook = (e) => {
     e.preventDefault();
-    const name = e.target[0].value;
-    const pages = e.target[1].value;
-    const PORT = process.env.PORT || 4001;
-    axios.post(`https://books-lists.herokuapp.com/books/add/`, { book: { name, pages } })
+    const title = e.target[0].value;
+    const author = e.target[1].value;
+    const pages = e.target[2].value;
+    const year = e.target[3].value;
+    const country = e.target[4].value;
+    const language = e.target[5].value;
+    const link = e.target[6].value;
+    axios.post(`http://localhost:4001/books/add/`, {book:{
+      title:title,
+      author:author,
+      pages:pages,
+      year:year,
+      country:country,
+      language:language,
+      link:link,
+    }})
       .then((res) => {
         setRefresh(true)
       })

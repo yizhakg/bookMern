@@ -8,7 +8,7 @@ export default function Home() {
   const [refresh, setRefresh] = useState(false);
 
   useEffect(() => {
-    axios.get(`https://books-lists.herokuapp.com/books`).then((res) => {
+    axios.get(`https://books-lists.herokuapp.com/books/`).then((res) => {
       setBooks(res.data.data);
       console.log(res.data.data);
     })
