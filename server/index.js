@@ -31,4 +31,3 @@ if (process.env.NODE_ENV === 'production') {
       res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
   });
   app.get('/', (req, res) => { res.send('Hello from Express!')
-}
