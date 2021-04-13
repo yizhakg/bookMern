@@ -12,7 +12,7 @@ export default function Form({ setRefresh }) {
     const country = e.target[4].value;
     const language = e.target[5].value;
     const link = e.target[6].value;
-    axios.post(`http://localhost:4001/books/add/`, {book:{
+    axios.post(`https://books-lists.herokuapp.com/books/add/`, {book:{
       title:title,
       author:author,
       pages:pages,
