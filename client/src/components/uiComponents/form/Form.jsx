@@ -40,7 +40,7 @@ export default function Form({ setRefresh }) {
         </span>
         <span className="input">
           <label htmlFor="pages">Book Pages</label>
-          <input id="pages" type="number" required />
+          <input id="pages" type="number" required min={10}/>
         </span>
         <span className="input">
           <label htmlFor="year">Book Year</label>
