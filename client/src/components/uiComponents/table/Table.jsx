@@ -5,7 +5,7 @@ import axios from 'axios'
 export default function Table({ books }) {
   const deleteBook = (id) => {
     let deletePassword = prompt("enter password")
-    if (deletePassword == "123123") {
+    if (deletePassword === "123123") {
       axios.delete(`${process.env.REACT_APP_URL}delete/${id}`)
         .then(res => {
           console.log(res);
