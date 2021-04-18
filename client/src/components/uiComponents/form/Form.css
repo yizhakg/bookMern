@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 100px;
+  margin: 60px;
 }
 .books-form span {
   display: flex;
@@ -17,6 +17,20 @@
   height: 26px;
   margin: 14px;
   width: 50%;
+}
+.submitBtn{
+  margin: 20px 50px;
+  padding: 10px 30px;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 25px;
+  border:none;
+  outline: none;
+  cursor: pointer;
+  transition: .3s;
+}
+.submitBtn:active{
+  box-shadow: 0 0 2px 1px #000 inset;
 }
 .books-form span label {
 text-align: left;
