@@ -23,7 +23,6 @@ export default function Form({ setRefresh }) {
     }})
       .then((res) => {
         setRefresh(true)
-        console.log(res);
       })
       .catch((err) => {
         console.log(err)

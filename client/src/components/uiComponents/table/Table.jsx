@@ -8,7 +8,7 @@ export default function Table({ books }) {
     if (deletePassword === "123123") {
       axios.delete(`${process.env.REACT_APP_URL}delete/${id}`)
         .then(res => {
-          console.log(res);
+          setRefresh(true)
         }).catch(err => { console.log(err); })
     }else{
       alert("wrong password contact site manager")

@@ -9,7 +9,6 @@ export default function Home() {
   useEffect(() => {
     axios.get(process.env.REACT_APP_URL).then((res) => {
       setBooks(res.data.data);
-      console.log(res.data.data);
     })
     setRefresh(false)
   }, [refresh])
@@ -18,7 +17,7 @@ export default function Home() {
     <div>
       <h1>Books</h1>
       <Form setRefresh={setRefresh} />
-      <Table books={books} />
+      <Table books={books} setRefresh={setRefresh}/>
     </div>
   )
 }
