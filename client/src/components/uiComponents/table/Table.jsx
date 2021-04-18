@@ -2,7 +2,7 @@ import React from 'react'
 import "./Table.css"
 import axios from 'axios'
 
-export default function Table({ books }) {
+export default function Table({ books,setRefresh }) {
   const deleteBook = (id) => {
     let deletePassword = prompt("enter password")
     if (deletePassword === "123123") {
