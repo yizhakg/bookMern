@@ -22,6 +22,11 @@ export default function Form({ setRefresh }) {
       link:link,
     }})
       .then((res) => {
+        document.querySelector(".addConfirm").style.display="block"
+        setTimeout(()=>{
+          document.querySelector(".addConfirm").style.display="none"
+        },2000)
+        e.target.reset()
         setRefresh(true)
       })
       .catch((err) => {
@@ -60,6 +65,7 @@ export default function Form({ setRefresh }) {
           <input id="link" type="text" />
         </span>
         <button type="submit">submit</button>
+        <p className="addConfirm">book added 👍</p>
       </form>
     </React.Fragment>
   )
