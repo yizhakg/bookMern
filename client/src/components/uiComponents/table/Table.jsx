@@ -1,7 +1,19 @@
 import React from 'react'
 import "./Table.css"
+import axios from 'axios'
 
 export default function Table({ books }) {
+  const deleteBook = (id) => {
+    let deletePassword = prompt("enter password")
+    if (deletePassword == "123123") {
+      axios.delete(`${process.env.REACT_APP_URL}delete/${id}`)
+        .then(res => {
+          console.log(res);
+        }).catch(err => { console.log(err); })
+    }else{
+      alert("wrong password contact site manager")
+    }
+  }
   return (
     <React.Fragment>
       <table>
@@ -14,6 +26,7 @@ export default function Table({ books }) {
           <th>Country</th>
           <th>Language</th>
           <th>Link</th>
+          <th>Delete</th>
         </tr>
         {
           books &&
@@ -26,7 +39,8 @@ export default function Table({ books }) {
               <td>{bookItem.year}</td>
               <td>{bookItem.country}</td>
               <td>{bookItem.language}</td>
-              <td><a href={bookItem.link}>site</a></td>
+              <td className="siteBtn"><a href={bookItem.link}>site</a></td>
+              <td className="deleteBtn" onClick={() => deleteBook(bookItem._id)}>X</td>
             </tr>
           ))
         }

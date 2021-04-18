@@ -13,3 +13,21 @@ td, th {
 tr:nth-child(even) {
   background-color: #575757;
 }
+.siteBtn a{
+text-decoration: none;
+color: inherit;
+transition: .5s;
+}
+.siteBtn a:hover{
+  font-size: 1.1em;
+  font-weight: 700;
+}
+.deleteBtn{
+  color: red;
+  text-align: center;
+  cursor: pointer;
+}
+.deleteBtn:hover{
+font-size: 1.1em;
+font-weight: 700;
+}

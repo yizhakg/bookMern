@@ -6,9 +6,8 @@ import { Form, Table } from '../../uiComponents'
 export default function Home() {
   const [books, setBooks] = useState([]);
   const [refresh, setRefresh] = useState(false);
-
   useEffect(() => {
-    axios.get(`https://books-lists.herokuapp.com/books/`).then((res) => {
+    axios.get(process.env.REACT_APP_URL).then((res) => {
       setBooks(res.data.data);
       console.log(res.data.data);
     })

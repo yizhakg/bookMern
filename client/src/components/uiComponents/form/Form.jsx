@@ -12,7 +12,7 @@ export default function Form({ setRefresh }) {
     const country = e.target[4].value;
     const language = e.target[5].value;
     const link = e.target[6].value;
-    axios.post(`https://books-lists.herokuapp.com/books/add/`, {book:{
+    axios.post(`${process.env.REACT_APP_URL}add/`, {book:{
       title:title,
       author:author,
       pages:pages,
@@ -23,6 +23,7 @@ export default function Form({ setRefresh }) {
     }})
       .then((res) => {
         setRefresh(true)
+        console.log(res);
       })
       .catch((err) => {
         console.log(err)
